@@ -1,0 +1,56 @@
+animal:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 300  
+  
+  # Position Controllers ---------------------------------------
+  Shoulder_Joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Shoulder_Joint1
+    pid: {p: 150.0, i: 65, d: 0}
+  Shoulder_Joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Shoulder_Joint2
+    pid: {p: 150.0, i: 65, d: 0}
+  Shoulder_Joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Shoulder_Joint3
+    pid: {p: 150.0, i: 65, d: 0}
+  Shoulder_Joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Shoulder_Joint4
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint1
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint2
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint3
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint4
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint5
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint6_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint6
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint7_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint7
+    pid: {p: 150.0, i: 65, d: 0}
+  foot_Joint8_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foot_Joint8
+    pid: {p: 150.0, i: 65, d: 0}
+    

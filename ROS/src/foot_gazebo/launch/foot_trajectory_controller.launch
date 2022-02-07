@@ -1,0 +1,8 @@
+<launch>
+
+    <rosparam file="$(find foot_gazebo)/config/trajectory_control.yaml" command="load"/>
+
+    <node name="frames_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+          output="screen" ns="/frames" args="frames_joint_controller"/>
+
+</launch>

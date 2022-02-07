@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="animal" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="shoulder_mass" value="0.252"/>
+  <xacro:property name="foot1_mass" value="0.27"/>
+  <xacro:property name="foot2_mass" value="0.114"/>
+  <xacro:property name="damping" value="0.1"/>
+  <xacro:property name="friction" value="0.1"/>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.65605245534295E-05 -7.4500246250192E-05 0.000331072187696624"
+        rpy="0 0 0" />
+      <mass
+        value="1.37310264677598" />
+      <inertia
+        ixx="0.0145526003142759"
+        ixy="-7.08204921615661E-06"
+        ixz="-1.76027148954693E-06"
+        iyy="0.0327705707270821"
+        iyz="-2.6435932061285E-06"
+        izz="0.0450016716255181" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_link1">
+    <inertial>
+      <origin
+        xyz="0.045394 0.00049346 -0.0024342"
+        rpy="0 0 0" />
+      <mass
+        value="${shoulder_mass}" />
+      <inertia
+        ixx="0.00017199"
+        ixy="1.3091E-08"
+        ixz="-7.5157E-08"
+        iyy="0.00027127"
+        iyz="-2.4112E-06"
+        izz="0.00017935" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shoulder_Joint1"
+    type="revolute">
+    <origin
+      xyz="0.1364 -0.1039 -0.040602"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link1">
+    <inertial>
+      <origin
+        xyz="-0.00010681 0.028167 -0.13855"
+        rpy="0 0 0" />
+      <mass
+        value="${foot1_mass}" />
+      <inertia
+        ixx="0.0011428"
+        ixy="-7.7816E-08"
+        ixz="-1.2295E-06"
+        iyy="0.0010922"
+        iyz="-4.0822E-05"
+        izz="0.00016177" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint1"
+    type="revolute">
+    <origin
+      xyz="0.0455 -0.0303999999999997 -0.01655"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link1" />
+    <child
+      link="foot_link1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link2">
+    <inertial>
+      <origin
+        xyz="0 0.0313 -0.114"
+        rpy="0 0 0" />
+      <mass
+        value="${foot2_mass}" />
+      <inertia
+        ixx="0.00071221"
+        ixy="1.2821E-10"
+        ixz="3.8415E-19"
+        iyy="0.0006539"
+        iyz="-3.0942E-21"
+        izz="0.00013137" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint2"
+    type="revolute">
+    <origin
+      xyz="-0.000300000000000189 -0.00559999999999965 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="foot_link1" />
+    <child
+      link="foot_link2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shoulder_link2">
+    <inertial>
+      <origin
+        xyz="-0.045396 0.00052276 -0.002428"
+        rpy="0 0 0" />
+      <mass
+        value="${shoulder_mass}" />
+      <inertia
+        ixx="0.00017199"
+        ixy="-9.6634E-09"
+        ixz="7.2469E-08"
+        iyy="0.00027131"
+        iyz="-1.3026E-06"
+        izz="0.00017931" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shoulder_Joint2"
+    type="revolute">
+    <origin
+      xyz="-0.137195865149232 -0.103898400498668 -0.0406019523406848"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link3">
+    <inertial>
+      <origin
+        xyz="0.0001043 0.033605 -0.13852"
+        rpy="0 0 0" />
+      <mass
+        value="${foot1_mass}" />
+      <inertia
+        ixx="0.0011408"
+        ixy="-1.0588E-08"
+        ixz="1.1974E-06"
+        iyy="0.001092"
+        iyz="1.4071E-05"
+        izz="0.00016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint3"
+    type="revolute">
+    <origin
+      xyz="-0.0454974228331889 -0.0304000000000003 -0.0165499999999999"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link2" />
+    <child
+      link="foot_link3" />
+    <axis
+      xyz="0 -0.999927336084633 -0.0120549803272323" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link4">
+    <inertial>
+      <origin
+        xyz="2.9416E-11 0.032672 -0.11362"
+        rpy="0 0 0" />
+      <mass
+        value="${foot2_mass}" />
+      <inertia
+        ixx="0.00071221"
+        ixy="1.2927E-10"
+        ixz="2.0517E-12"
+        iyy="0.00065382"
+        iyz="6.2986E-06"
+        izz="0.00013145" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint4"
+    type="revolute">
+    <origin
+      xyz="0.00030000000000005 0.00351264957536317 -0.200339886548781"
+      rpy="0 0 0" />
+    <parent
+      link="foot_link3" />
+    <child
+      link="foot_link4" />
+    <axis
+      xyz="0 -0.999927336084633 -0.0120549803272322" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shoulder_link3">
+    <inertial>
+      <origin
+        xyz="0.045396 -0.00049346 -0.0024342"
+        rpy="0 0 0" />
+      <mass
+        value="${shoulder_mass}" />
+      <inertia
+        ixx="0.00017199"
+        ixy="-8.7889E-09"
+        ixz="-7.258E-08"
+        iyy="0.00027127"
+        iyz="2.4112E-06"
+        izz="0.00017935" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shoulder_Joint3"
+    type="revolute">
+    <origin
+      xyz="0.137204134850768 0.103301599501334 -0.0406019523406844"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link5">
+    <inertial>
+      <origin
+        xyz="0.00010681 -0.031454 -0.13855"
+        rpy="0 0 0" />
+      <mass
+        value="${foot1_mass}" />
+      <inertia
+        ixx="0.0011409"
+        ixy="-1.3384E-08"
+        ixz="1.2295E-06"
+        iyy="0.0010922"
+        iyz="4.0257E-07"
+        izz="0.00015984" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint5"
+    type="revolute">
+    <origin
+      xyz="0.0454974228331887 0.0304000000000004 -0.01655"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link3" />
+    <child
+      link="foot_link5" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link6">
+    <inertial>
+      <origin
+        xyz="0 -0.0313 -0.114"
+        rpy="0 0 0" />
+      <mass
+        value="${foot2_mass}" />
+      <inertia
+        ixx="0.00071221"
+        ixy="1.2821E-10"
+        ixz="1.1095E-18"
+        iyy="0.0006539"
+        iyz="-7.7124E-19"
+        izz="0.00013137" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint6"
+    type="revolute">
+    <origin
+      xyz="0.000299999999999967 -9.9999999999989E-05 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="foot_link5" />
+    <child
+      link="foot_link6" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shoulder_link4">
+    <inertial>
+      <origin
+        xyz="-0.045394 -0.00049346 -0.0024342"
+        rpy="0 0 0" />
+      <mass
+        value="${shoulder_mass}" />
+      <inertia
+        ixx="0.00017199"
+        ixy="1.3091E-08"
+        ixz="7.5157E-08"
+        iyy="0.00027127"
+        iyz="2.4112E-06"
+        izz="0.00017935" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/shoulder_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Shoulder_Joint4"
+    type="revolute">
+    <origin
+      xyz="-0.1372 0.1033 -0.040602"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link4" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link7">
+    <inertial>
+      <origin
+        xyz="0.00010681 -0.031454 -0.13855"
+        rpy="0 0 0" />
+      <mass
+        value="${foot1_mass}" />
+      <inertia
+        ixx="0.0011409"
+        ixy="-1.3384E-08"
+        ixz="1.2295E-06"
+        iyy="0.0010922"
+        iyz="4.0257E-07"
+        izz="0.00015984" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint7"
+    type="revolute">
+    <origin
+      xyz="-0.0455000000000004 0.0303999999999995 -0.01655"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link4" />
+    <child
+      link="foot_link7" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="foot_link8">
+    <inertial>
+      <origin
+        xyz="-6.9111E-15 -0.0313 -0.114"
+        rpy="0 0 0" />
+      <mass
+        value="${foot2_mass}" />
+      <inertia
+        ixx="0.00071221"
+        ixy="1.2821E-10"
+        ixz="8.3659E-17"
+        iyy="0.0006539"
+        iyz="7.8529E-18"
+        izz="0.00013137" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://animal/meshes/foot_link8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_Joint8"
+    type="revolute">
+    <origin
+      xyz="0.000299999999999967 -0.0001000000000001 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="foot_link7" />
+    <child
+      link="foot_link8" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="2" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <!-- /////////////////////////////////   Gazebo   ////////////////////////////////////// -->
+
+    
+    <!-- Transmissions for ROS Control -->
+    <xacro:macro name="transmission_block" params="joint_name">
+        <transmission name="tran1">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${joint_name}">
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="motor1">
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+    
+    <xacro:transmission_block joint_name="Shoulder_Joint1"/>
+    <xacro:transmission_block joint_name="Shoulder_Joint2"/>
+    <xacro:transmission_block joint_name="Shoulder_Joint3"/>
+    <xacro:transmission_block joint_name="Shoulder_Joint4"/>
+    <xacro:transmission_block joint_name="foot_Joint1"/>
+    <xacro:transmission_block joint_name="foot_Joint2"/>
+    <xacro:transmission_block joint_name="foot_Joint3"/>
+    <xacro:transmission_block joint_name="foot_Joint4"/>
+    <xacro:transmission_block joint_name="foot_Joint5"/>
+    <xacro:transmission_block joint_name="foot_Joint6"/>
+    <xacro:transmission_block joint_name="foot_Joint7"/>
+    <xacro:transmission_block joint_name="foot_Joint8"/>
+
+  <gazebo reference="base_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>base _link</bodyName>
+        <updateRateHZ>100.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+  <xacro:macro name="link_setup_block" params="link_name">
+    <gazebo reference="${link_name}">
+      <kp>1000000.0</kp>
+      <kd>1.0</kd>
+      <mu1>0.6</mu1>
+      <mu2>0.6</mu2>
+      <minDepth>0.001</minDepth>
+    </gazebo>
+  </xacro:macro>
+  <xacro:link_setup_block link_name="foot_link2"/>
+  <xacro:link_setup_block link_name="foot_link4"/>
+  <xacro:link_setup_block link_name="foot_link6"/>
+  <xacro:link_setup_block link_name="foot_link8"/>
+
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/animal</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            <legacyModeNS>true</legacyModeNS>
+        </plugin>
+    </gazebo>
+</robot>

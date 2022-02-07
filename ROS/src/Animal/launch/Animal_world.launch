@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="paused" default="true"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="world_name" value="$(find Animal)/world/pigot.world" />
+
+  <!-- We resume the logic in empty_world.launch -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find animal)/urdf/animal.xacro'" /> 
+
+
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+	args="-param robot_description -urdf -model animal -z 0.47
+                                              -J Shoulder_Joint1 0
+                                              -J Shoulder_Joint2 0
+                                              -J Shoulder_Joint3 0
+                                              -J Shoulder_Joint4 0
+                                              -J foot_Joint1 0
+                                              -J foot_Joint2 0
+                                              -J foot_Joint3 0
+                                              -J foot_Joint4 0
+                                              -J foot_Joint5 0
+                                              -J foot_Joint6 0
+                                              -J foot_Joint7 0
+                                              -J foot_Joint8 0"/>
+
+
+
+
+
+</launch>

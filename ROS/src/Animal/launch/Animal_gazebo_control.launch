@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- 启动Gazebo  -->
+    <include file="$(find animal)/launch/Animal_world.launch" />
+
+    <!-- 启动Gazebo controllers -->
+    <include file="$(find animal)/launch/Animal_gazebo_controller.launch" />   
+
+</launch>

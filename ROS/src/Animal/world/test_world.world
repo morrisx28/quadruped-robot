@@ -1,0 +1,1083 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.3</mu>
+                <mu2>0.3</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>679 769000000</sim_time>
+      <real_time>29 411810627</real_time>
+      <wall_time>1603698246 248901454</wall_time>
+      <iterations>28981</iterations>
+      <model name='Animal'>
+        <pose frame=''>-0.042123 -0.001125 0.414433 -0.001797 -0.001099 -0.135644</pose>
+        <scale>1 1 1</scale>
+        <link name='Link1'>
+          <pose frame=''>0.079766 -0.122624 0.414769 -0.00174 -0.001104 -0.135645</pose>
+          <velocity>-0.00237 -0.000963 0.000595 0.000475 0.026559 -0.00574</velocity>
+          <acceleration>-0.876497 -1.19264 0.357632 0.092388 0.57674 1.61565</acceleration>
+          <wrench>-0.220877 -0.300545 0.090123 0 -0 0</wrench>
+        </link>
+        <link name='Link10'>
+          <pose frame=''>-0.192945 0.161581 0.200738 -0.001918 -0.001166 -0.135646</pose>
+          <velocity>-0.001 0.000301 0.000589 -0.001033 -0.000539 -0.005924</velocity>
+          <acceleration>-1.7046 -1.0023 1.26694 -0.730465 0.959425 -2.40793</acceleration>
+          <wrench>-0.194325 -0.114262 0.144431 0 -0 0</wrench>
+        </link>
+        <link name='Link11'>
+          <pose frame=''>0.157007 0.106731 0.400101 -0.001659 -0.001157 -0.13564</pose>
+          <velocity>-0.001408 -0.001253 -0.009789 -5.9e-05 0.001276 -0.006455</velocity>
+          <acceleration>-1.48735 -0.868114 -19.5609 0.177211 -0.31605 -2.49154</acceleration>
+          <wrench>-0.401584 -0.234391 -5.28145 0 -0 0</wrench>
+        </link>
+        <link name='Link12'>
+          <pose frame=''>0.154393 0.108301 0.200128 -0.00165 -0.001428 -0.135642</pose>
+          <velocity>-0.001645 -0.001241 -0.010548 -0.002275 0.001593 -0.006539</velocity>
+          <acceleration>-1.86064 -1.33186 -20.8055 -1.67853 -0.351083 -0.333418</acceleration>
+          <wrench>-0.212113 -0.151831 -2.37182 0 -0 0</wrench>
+        </link>
+        <link name='Link2'>
+          <pose frame=''>0.107786 0.082672 0.414401 -0.00168 -0.001077 -0.135642</pose>
+          <velocity>-0.00127 -0.001109 -0.008286 0.006949 0.021398 -0.005863</velocity>
+          <acceleration>-0.757989 -1.21048 -18.6754 -0.226226 1.32343 0.711887</acceleration>
+          <wrench>-0.191013 -0.30504 -4.70619 0 -0 0</wrench>
+        </link>
+        <link name='Link3'>
+          <pose frame=''>-0.164012 0.120373 0.414094 -0.001913 -0.001082 -0.135645</pose>
+          <velocity>-0.001087 0.000308 -0.000599 0.00246 0.023508 -0.004784</velocity>
+          <acceleration>-0.722842 -0.990485 1.29611 1.65244 -0.803303 -2.79206</acceleration>
+          <wrench>-0.182156 -0.249602 0.326621 0 -0 0</wrench>
+        </link>
+        <link name='Link4'>
+          <pose frame=''>-0.192113 -0.085517 0.414471 -0.00164 -0.001111 -0.135644</pose>
+          <velocity>-0.002187 0.000437 0.007948 0.006891 0.023015 -0.005034</velocity>
+          <acceleration>-0.85313 -0.932564 19.4156 0.229637 0.040162 -2.45897</acceleration>
+          <wrench>-0.214989 -0.235006 4.89273 0 -0 0</wrench>
+        </link>
+        <link name='Link5'>
+          <pose frame=''>-0.241401 -0.110302 0.39992 -0.001662 -0.002631 -0.135641</pose>
+          <velocity>-0.002835 0.000814 0.009244 -0.000107 -0.006861 -0.004389</velocity>
+          <acceleration>0.041277 -0.675611 19.9873 -0.091774 0.876537 -1.37968</acceleration>
+          <wrench>0.011145 -0.182415 5.39657 0 -0 0</wrench>
+        </link>
+        <link name='Link6'>
+          <pose frame=''>-0.237782 -0.111002 0.199955 -0.001675 -0.003605 -0.135639</pose>
+          <velocity>-0.00176 0.000761 0.010433 -0.003558 -0.008118 -0.004532</velocity>
+          <acceleration>2.2323 -1.34542 22.0291 1.07107 -0.092323 -1.33487</acceleration>
+          <wrench>0.254482 -0.153378 2.51132 0 -0 0</wrench>
+        </link>
+        <link name='Link7'>
+          <pose frame=''>0.120627 -0.159821 0.400549 -0.001735 -0.001165 -0.135644</pose>
+          <velocity>-0.002942 -0.001188 -0.00048 -0.003643 -0.000518 -0.005448</velocity>
+          <acceleration>-1.48168 -1.02547 0.361661 0.787399 -0.391444 -1.00298</acceleration>
+          <wrench>-0.400052 -0.276876 0.097648 0 -0 0</wrench>
+        </link>
+        <link name='Link8'>
+          <pose frame=''>0.118212 -0.160395 0.200558 -0.001734 -0.001713 -0.135639</pose>
+          <velocity>-0.002837 -0.00191 -0.000488 -0.003627 -0.000545 -0.005379</velocity>
+          <acceleration>-1.40355 -0.963787 0.347014 -0.958081 -0.429851 -1.3135</acceleration>
+          <wrench>-0.160004 -0.109872 0.03956 0 -0 0</wrench>
+        </link>
+        <link name='Link9'>
+          <pose frame=''>-0.204809 0.157818 0.400349 -0.001918 -0.000921 -0.13564</pose>
+          <velocity>-0.001168 0.000558 0.000514 -0.000859 -0.000589 -0.005722</velocity>
+          <acceleration>-1.53782 -0.95145 1.28439 -0.121682 0.883873 1.93854</acceleration>
+          <wrench>-0.415213 -0.256892 0.346785 0 -0 0</wrench>
+        </link>
+        <link name='base_link'>
+          <pose frame=''>-0.042123 -0.001125 0.414433 -0.001797 -0.001099 -0.135644</pose>
+          <velocity>-0.001734 -0.000374 -6.9e-05 -0.035954 0.031245 -0.005316</velocity>
+          <acceleration>1.4194 1.5634 0.723706 -2.28859 -0.101514 2.28153</acceleration>
+          <wrench>2.45655 2.70577 1.25252 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <model name='Animal'>
+      <link name='base_link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0 -3e-05 0.034153 0 -0 0</pose>
+          <mass>1.7307</mass>
+          <inertia>
+            <ixx>0.018437</ixx>
+            <ixy>5.6694e-06</ixy>
+            <ixz>8.9977e-11</ixz>
+            <iyy>0.051776</iyy>
+            <iyz>-9.5537e-07</iyz>
+            <izz>0.067028</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Link2'>
+        <pose frame=''>0.1372 0.1033 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.045397 -0.00031 -0.001073 0 -0 0</pose>
+          <mass>0.252</mass>
+          <inertia>
+            <ixx>0.00017013</ixx>
+            <ixy>-1.2055e-08</ixy>
+            <ixz>-7.4449e-08</ixz>
+            <iyy>0.00027025</iyy>
+            <iyz>3.7432e-06</iyz>
+            <izz>0.00017837</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link2_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link2.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link2_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link2.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Shoulder_Joint1' type='revolute'>
+        <child>Link2</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link11'>
+        <pose frame=''>0.1827 0.133818 -0.014301 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.002197 -0.030177 -0.13842 0 -0 0</pose>
+          <mass>0.27</mass>
+          <inertia>
+            <ixx>0.0011341</ixx>
+            <ixy>1.4679e-07</ixy>
+            <ixz>-1.5041e-05</ixz>
+            <iyy>0.0010864</iyy>
+            <iyz>1.024e-05</iyz>
+            <izz>0.00015917</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link11_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link11.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link11_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link11.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint1' type='revolute'>
+        <child>Link11</child>
+        <parent>Link2</parent>
+        <axis>
+          <xyz>0 0.99997 0.00817</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link12'>
+        <pose frame=''>0.179667 0.135352 -0.214271 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.00265 -0.030368 -0.11422 0 -0 0</pose>
+          <mass>0.114</mass>
+          <inertia>
+            <ixx>0.0007119</ixx>
+            <ixy>-1.1015e-07</ixy>
+            <ixz>1.3497e-05</ixz>
+            <iyy>0.00065387</iyy>
+            <iyz>4.2665e-06</iyz>
+            <izz>0.00013172</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link12_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link12.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link12_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link12.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint5' type='revolute'>
+        <child>Link12</child>
+        <parent>Link11</parent>
+        <axis>
+          <xyz>0 0.99997 0.00817</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link3'>
+        <pose frame=''>-0.1372 0.1039 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.045394 3.7e-05 -0.00107 0 -0 0</pose>
+          <mass>0.252</mass>
+          <inertia>
+            <ixx>0.00017021</ixx>
+            <ixy>2.192e-08</ixy>
+            <ixz>7.6888e-08</ixz>
+            <iyy>0.00027006</iyy>
+            <iyz>5.5063e-06</iyz>
+            <izz>0.00017864</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link3_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link3.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link3_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link3.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Shoulder_Joint2' type='revolute'>
+        <child>Link3</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link9'>
+        <pose frame=''>-0.1827 0.13551 -0.013635 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.007542 -0.027276 -0.13884 0 -0 0</pose>
+          <mass>0.27</mass>
+          <inertia>
+            <ixx>0.0011314</ixx>
+            <ixy>-1.7252e-06</ixy>
+            <ixz>5.3598e-05</ixz>
+            <iyy>0.0010856</iyy>
+            <iyz>2.9571e-05</iyz>
+            <izz>0.00016273</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link9_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link9.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link9_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link9.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint2' type='revolute'>
+        <child>Link9</child>
+        <parent>Link3</parent>
+        <axis>
+          <xyz>0 0.99958 0.029119</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link10'>
+        <pose frame=''>-0.171638 0.141225 -0.213245 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.00218 -0.027968 -0.11484 0 -0 0</pose>
+          <mass>0.114</mass>
+          <inertia>
+            <ixx>0.000712</ixx>
+            <ixy>-3.2321e-07</ixy>
+            <ixz>1.1099e-05</ixz>
+            <iyy>0.00065346</iyy>
+            <iyz>1.5203e-05</iyz>
+            <izz>0.00013202</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link10_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link10.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link10_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link10.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint6' type='revolute'>
+        <child>Link10</child>
+        <parent>Link9</parent>
+        <axis>
+          <xyz>0 0.99958 0.029119</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link1'>
+        <pose frame=''>0.1372 -0.1039 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.045394 -1.4e-05 -0.001071 0 -0 0</pose>
+          <mass>0.252</mass>
+          <inertia>
+            <ixx>0.00017021</ixx>
+            <ixy>2.3597e-08</ixy>
+            <ixz>-7.639e-08</ixz>
+            <iyy>0.00027026</iyy>
+            <iyz>-3.5011e-06</iyz>
+            <izz>0.00017845</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link1_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link1.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link1_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link1.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Shoulder_Joint3' type='revolute'>
+        <child>Link1</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link7'>
+        <pose frame=''>0.1827 -0.135205 -0.014324 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.001864 0.030584 -0.1384 0 -0 0</pose>
+          <mass>0.27</mass>
+          <inertia>
+            <ixx>0.0011341</ixx>
+            <ixy>-7.332e-08</ixy>
+            <ixz>-1.2708e-05</ixz>
+            <iyy>0.0010865</iyy>
+            <iyz>-6.1897e-06</iyz>
+            <izz>0.00015896</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link7_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link7.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link7_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link7.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint3' type='revolute'>
+        <child>Link7</child>
+        <parent>Link1</parent>
+        <axis>
+          <xyz>0 -0.99997 0.00724</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link8'>
+        <pose frame=''>0.180152 -0.135753 -0.214314 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.000727 0.030474 -0.11422 0 -0 0</pose>
+          <mass>0.114</mass>
+          <inertia>
+            <ixx>0.00071219</ixx>
+            <ixy>-2.6697e-08</ixy>
+            <ixz>-3.7052e-06</ixz>
+            <iyy>0.00065387</iyy>
+            <iyz>-3.7828e-06</iyz>
+            <izz>0.00013142</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link8_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link8.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link8_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link8.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint7' type='revolute'>
+        <child>Link8</child>
+        <parent>Link7</parent>
+        <axis>
+          <xyz>0 -0.99997 0.00724</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link4'>
+        <pose frame=''>-0.1372 -0.1039 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.045397 -6e-06 -0.001071 0 -0 0</pose>
+          <mass>0.252</mass>
+          <inertia>
+            <ixx>0.00017021</ixx>
+            <ixy>-2.0074e-08</ixy>
+            <ixz>7.4345e-08</ixz>
+            <iyy>0.00027031</iyy>
+            <iyz>-2.8231e-06</iyz>
+            <izz>0.0001784</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link4_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link4.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link4_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link4.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Shoulder_Joint4' type='revolute'>
+        <child>Link4</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link5'>
+        <pose frame=''>-0.1827 -0.135098 -0.014554 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.002281 0.031327 -0.13817 0 -0 0</pose>
+          <mass>0.27</mass>
+          <inertia>
+            <ixx>0.0011341</ixx>
+            <ixy>2.3289e-08</ixy>
+            <ixz>1.5631e-05</ixz>
+            <iyy>0.0010865</iyy>
+            <iyz>-2.532e-06</iyz>
+            <izz>0.00015908</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link5_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link5.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link5_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link5.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint4' type='revolute'>
+        <child>Link5</child>
+        <parent>Link4</parent>
+        <axis>
+          <xyz>0 -1 -0.000141</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Link6'>
+        <pose frame=''>-0.179546 -0.13497 -0.214534 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.003073 0.031316 -0.11396 0 -0 0</pose>
+          <mass>0.114</mass>
+          <inertia>
+            <ixx>0.00071179</ixx>
+            <ixy>-2.0824e-09</ixy>
+            <ixz>1.5653e-05</ixz>
+            <iyy>0.0006539</iyy>
+            <iyz>7.3802e-08</iyz>
+            <izz>0.00013179</izz>
+          </inertia>
+        </inertial>
+        <collision name='Link6_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link6.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Link6_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lab931/ros_ws/src/Animal/meshes/Link6.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='foot_Joint8' type='revolute'>
+        <child>Link6</child>
+        <parent>Link5</parent>
+        <axis>
+          <xyz>0 -1 -0.000141</xyz>
+          <limit>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>8.4</effort>
+            <velocity>2</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0.1</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <static>0</static>
+      <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+        <robotNamespace>/Animal</robotNamespace>
+        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        <legacyModeNS>1</legacyModeNS>
+      </plugin>
+      <pose frame=''>0 0 2 0 -0 0</pose>
+    </model>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
