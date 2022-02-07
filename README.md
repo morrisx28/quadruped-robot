@@ -2,9 +2,11 @@
 quadruped robot research project
 
 ##launch quadruped robot model in ROS
+
 launch Animal Animal_gazebo_controller.launch
 
 ##node for model control in ROS
+
 ROS_quadruped_control.py
 
 quadruped robot in Gazebo
