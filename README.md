@@ -1,5 +1,6 @@
-# quadruped-robot
-quadruped robot research project
+# Quadruped-robot
+
+Quadruped robot research project
 
 Title: Research on Gait Planning of Quadruped Robot Control System Using Reinforcement Learning and CPG Network
 
@@ -15,9 +16,13 @@ ROS_quadruped_control.py
 
 
 ## Here are some video clip and images show how it works in Gazebo in real world ##
+
 Youtube link:
+
 https://youtu.be/MmCR7UOfdsE (test in real world)
+
 https://youtu.be/b6USXMt_Qfg (test in Gazebo)
+
 https://youtu.be/qNHSWCRUQhE (test in Gazebo)
 
 Quadruped robot in real world (image):
