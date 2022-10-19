@@ -2,6 +2,7 @@
 quadruped robot research project
 
 Title: Research on Gait Planning of Quadruped Robot Control System Using Reinforcement Learning and CPG Network
+
 Paper download link: https://hdl.handle.net/11296/9rzqfx
 
 ## launch quadruped robot model in ROS ##
