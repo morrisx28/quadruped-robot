@@ -15,7 +15,7 @@ launch Animal Animal_gazebo_control.launch
 ROS_quadruped_control.py 
 
 
-## Here are some video clip and images show how it works in Gazebo in real world ##
+## Here are some video clip and images show how it works in Gazebo and real world ##
 
 Youtube link:
 
