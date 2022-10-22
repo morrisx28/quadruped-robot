@@ -1,9 +1,0 @@
-controller_list:
-  - name: fake_frames_controller
-    joints:
-      - Joint_1
-      - Joint_2
-      - Joint_3
-initial:  # Define initial robot poses.
-#  - group: frames
-#    pose: home
